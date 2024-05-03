@@ -1,14 +1,21 @@
 //your JS code here. If required.
-function playSound(soundName) {
-  var audio = new Audio('sounds/' + soundName + '.mp3');
-  audio.play();
-}
+const buttons = document.getElementById('buttons');
+const sounds = {};
 
-// Function to stop all sounds
-function stopAllSounds() {
-  var sounds = document.querySelectorAll('audio');
-  sounds.forEach(sound => {
-    sound.pause();
-    sound.currentTime = 0;
-  });
-}
+buttons.addEventListener('click', function(e) {
+  const sound = e.target.dataset.sound;
+  if (sound) {
+    if (sounds[sound]) {
+      sounds[sound].play();
+    } else {
+      const audio = new Audio(`sounds/${sound}.mp3`);
+      sounds[sound] = audio;
+      audio.play();
+    }
+  } else if (e.target.classList.contains('stop')) {
+    for (const sound in sounds) {
+      sounds[sound].pause();
+      sounds[sound].currentTime = 0;
+    }
+  }
+});

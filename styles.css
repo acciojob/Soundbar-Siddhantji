@@ -1,9 +1,37 @@
 /*  your css code here. If applicable */
-body{
-	background-color:purple;
-	display:flex;
-	justify-content:space-around;
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-.btn{
-	background-color:blue;
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stop {
+    background-color: red;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
