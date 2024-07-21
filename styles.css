@@ -1,37 +1,22 @@
 /*  your css code here. If applicable */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+body{
+	background-color:darkviolet;
+	
 }
-
-h1 {
-    margin-bottom: 20px;
+#buttons{
+	margin:190px 0px;
+	display:flex;
+	flex-flow:row-wrap;
+	gap:22px;
 }
-
-#buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.btn{
+	background-color:darkviolet;
+	color:white;
+	padding:10px 10px;
 }
-
-.btn {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.stop{
+	background-color:darkviolet;
+	color:white;
+	padding:10px 10px;
 }
-
-.stop {
-    background-color: red;
-    color: white;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
+	
